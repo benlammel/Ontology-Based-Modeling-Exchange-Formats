@@ -1,6 +1,8 @@
 package ch.lammel.obm.exchange.usermanagement;
 
-public class User {
+import ch.lammel.obm.exchange.interfaces.OntologyBasedModelingExchangeFormatInterface;
+
+public class User implements OntologyBasedModelingExchangeFormatInterface {
 	
 	private String email;
 	private String firstName;
@@ -43,6 +45,7 @@ public class User {
 		this.password = password;
 	}
 
+	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
 		sb.append("= User =\n");
