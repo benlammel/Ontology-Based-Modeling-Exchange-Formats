@@ -2,6 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ch.lammel.obm.exchange</groupId>
   <artifactId>Ontology-Based-Modeling-Exchange-Formats</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -15,10 +17,4 @@
       </plugin>
     </plugins>
   </build>
-  <parent>
-  	<groupId>ch.lammel.obm</groupId>
-  	<artifactId>Ontology-Based-Modeling-Framework</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  	<relativePath>../Ontology-Based-Modeling-Framework</relativePath>
-  </parent>
 </project>
