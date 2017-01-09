@@ -2,15 +2,14 @@ package ch.lammel.obm.exchange.usermanagement;
 
 import ch.lammel.obm.exchange.interfaces.OntologyBasedModelingExchangeFormatInterface;
 
-public class User implements OntologyBasedModelingExchangeFormatInterface {
+public class UserModel implements OntologyBasedModelingExchangeFormatInterface {
 	
 	private String email;
 	private String firstName;
 	private String lastName;
 	private String password;
 	
-	public User(){
-		
+	public UserModel(){
 	}
 	
 	public String getEmail() {
