@@ -1,7 +1,6 @@
 package ch.lammel.obm.exchange.notification;
 
 import ch.lammel.obm.exchange.interfaces.OntologyBasedModelingExchangeFormatInterface;
-import ch.lammel.obm.exchange.notification.NotificationMessage.NotificationType;
 
 public class NotificationMessage implements OntologyBasedModelingExchangeFormatInterface {
 	

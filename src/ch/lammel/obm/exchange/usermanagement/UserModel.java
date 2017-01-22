@@ -2,25 +2,32 @@ package ch.lammel.obm.exchange.usermanagement;
 
 import ch.lammel.obm.exchange.interfaces.OntologyBasedModelingExchangeFormatInterface;
 import ch.lammel.obm.exchange.interfaces.OntologyModelAnnotation;
+import ch.lammel.obm.security.UserRoles;
 
-@OntologyModelAnnotation(uri="obm:User")
+@OntologyModelAnnotation(uri="obm:User", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
+		UserRoles.SYSTEMSUPERUSER })
 public class UserModel implements OntologyBasedModelingExchangeFormatInterface {
 	
-	@OntologyModelAnnotation(uri="obm:userHasEmail")
+	@OntologyModelAnnotation(uri="obm:userHasEmail", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
+			UserRoles.SYSTEMSUPERUSER })
 	public String email;
 	
-	@OntologyModelAnnotation(uri="obm:userHasFirstName")
+	@OntologyModelAnnotation(uri="obm:userHasFirstName", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
+			UserRoles.SYSTEMSUPERUSER })
 	public String firstName;
 	
-	@OntologyModelAnnotation(uri="obm:userHasLastName")
+	@OntologyModelAnnotation(uri="obm:userHasLastName", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
+			UserRoles.SYSTEMSUPERUSER })
 	public String lastName;
 	
-	@OntologyModelAnnotation(uri="obm:userHasPassword")
+	@OntologyModelAnnotation(uri="obm:userHasPassword", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
+			UserRoles.SYSTEMSUPERUSER })
 	public String password;
 	
 	public String userURI;
 	
-	@OntologyModelAnnotation(uri="obm:userHasCreationDateTime")
+	@OntologyModelAnnotation(uri="obm:userHasCreationDateTime", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
+			UserRoles.SYSTEMSUPERUSER })
 	public String creationTime;
 	
 //	public UserModel(){

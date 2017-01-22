@@ -9,4 +9,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface OntologyModelAnnotation {
 	public String uri();
+	public boolean uniqueIdentifier() default false;
+	public String[] readAccess();
+	public String[] writeAccess();
 }
