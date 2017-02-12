@@ -33,7 +33,14 @@ public class MyAnnotationTest {
      
     public static void main(String a[]){
          
-        MyAnnotationTest mat = new MyAnnotationTest();
-        mat.myAnnotationTestMethod();
+//        MyAnnotationTest mat = new MyAnnotationTest();
+//        mat.myAnnotationTestMethod();
+    	
+    	
+String test = "owl:Thing";
+		
+		String[] split = test.split(":");
+		
+		System.out.println(split[0]);
     }
 }

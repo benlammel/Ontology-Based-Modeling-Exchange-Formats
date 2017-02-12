@@ -1,5 +1,6 @@
 package ch.lammel.obm.exchange.ontology;
 
+@Deprecated
 public class NamespaceModel {
 
 	private String namespace;

@@ -1,36 +1,38 @@
 package ch.lammel.obm.exchange.usermanagement;
 
 import ch.lammel.obm.exchange.interfaces.OntologyBasedModelingExchangeFormatInterface;
-import ch.lammel.obm.exchange.interfaces.OntologyModelAnnotation;
-import ch.lammel.obm.security.UserRoles;
+import ch.lammel.obm.exchange.type.ExchangeType;
 
-@OntologyModelAnnotation(uri="obm:User", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
-		UserRoles.SYSTEMSUPERUSER })
 public class UserModel implements OntologyBasedModelingExchangeFormatInterface {
 	
-	@OntologyModelAnnotation(uri="obm:userHasEmail", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
-			UserRoles.SYSTEMSUPERUSER })
-	public String email;
+	private String email;
+	private String firstName;
+	private String lastName;
+	private String password;
+	private String userURI;
+	private String creationTime;
 	
-	@OntologyModelAnnotation(uri="obm:userHasFirstName", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
-			UserRoles.SYSTEMSUPERUSER })
-	public String firstName;
+	private ExchangeType exchangeType;
 	
-	@OntologyModelAnnotation(uri="obm:userHasLastName", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
-			UserRoles.SYSTEMSUPERUSER })
-	public String lastName;
+	private UserModel(){
+		exchangeType = ExchangeType.USERMODEL;
+	}
 	
-	@OntologyModelAnnotation(uri="obm:userHasPassword", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
-			UserRoles.SYSTEMSUPERUSER })
-	public String password;
-	
-	public String userURI;
-	
-	@OntologyModelAnnotation(uri="obm:userHasCreationDateTime", readAccess = { UserRoles.PROJECTUSER }, writeAccess = {
-			UserRoles.SYSTEMSUPERUSER })
-	public String creationTime;
-	
-//	public UserModel(){
+	public UserModel(String email, String password) {
+		this();
+		this.setEmail(email);
+		this.setPassword(password);
+	}
+
+	private void setPassword(String password) {
+		this.password = password;
+	}
+
+	private void setEmail(String email) {
+		this.email = email;
+	}
+
+	//	public UserModel(){
 //	}
 //	
 //	public String getEmail() {
@@ -84,4 +86,33 @@ public class UserModel implements OntologyBasedModelingExchangeFormatInterface {
 //	public String getUserURI() {
 //		return userURI;
 //	}
+
+	public String getUserURI() {
+		return this.userURI;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setUserURI(String userURI) {
+		this.userURI = userURI;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	@Override
+	public ExchangeType getExchangeType() {
+		return exchangeType;
+	}
 }
