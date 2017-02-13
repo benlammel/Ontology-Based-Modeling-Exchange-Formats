@@ -5,17 +5,12 @@ import java.util.ArrayList;
 
 public class ProjectModel {
 
-	private String projectName;
-
-	private String projectDescription;
-
+	private String name;
+	private String description;
 	private ArrayList<String> userHasAccess;
-
 	private String creationDateTime;
-
-	private String projectCreator;
-
-	private String projectURI;
+	private String creator;
+	private String uri;
 
 	public ProjectModel() {
 		userHasAccess = new ArrayList<String>();
@@ -24,17 +19,17 @@ public class ProjectModel {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("\n==ProjectModel==\n");
-		sb.append("projectName: \t" + projectName + "\n");
-		sb.append("projectDescription: \t" + projectDescription + "\n");
+		sb.append("projectName: \t" + name + "\n");
+		sb.append("projectDescription: \t" + description + "\n");
 		sb.append("userHasAccess: \t" + userHasAccess.toString() + "\n");
-		sb.append("projectCreator: \t" + projectCreator + "\n");
+		sb.append("projectCreator: \t" + creator + "\n");
 		sb.append("creationDateTime: \t" + creationDateTime + "\n");
 		sb.append("****End ProjectModel****\n");
 		return sb.toString();
 	}
 
 	public void setProjectURI(String uri) {
-		this.projectURI = uri;
+		this.uri = uri;
 	}
 
 	public void setCreationDateTime(String creationDateTime) {
@@ -42,19 +37,19 @@ public class ProjectModel {
 	}
 
 	public void setProjectName(String projectName) {
-		this.projectName = projectName;
+		this.name = projectName;
 	}
 
 	public void setProjectDescription(String projectDescription) {
-		this.projectDescription = projectDescription;
+		this.description = projectDescription;
 	}
 
 	public String getProjectName() {
-		return projectName;
+		return name;
 	}
 
 	public String getProjectDescription() {
-		return projectDescription;
+		return description;
 	}
 
 }
