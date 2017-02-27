@@ -11,23 +11,23 @@ public class PerspectiveModel {
 	public PerspectiveModel() {
 	}
 
-//	public String toString() {
-//		StringBuilder sb = new StringBuilder();
-//		sb.append("\n==ProjectModel==\n");
-//		sb.append("projectName: \t" + projectName + "\n");
-//		sb.append("projectDescription: \t" + projectDescription + "\n");
-//		sb.append("userHasAccess: \t" + userHasAccess.toString() + "\n");
-//		sb.append("projectCreator: \t" + projectCreator + "\n");
-//		sb.append("creationDateTime: \t" + creationDateTime + "\n");
-//		sb.append("****End ProjectModel****\n");
-//		return sb.toString();
-//	}
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("\n==Perspective==\n");
+		sb.append("name: \t" + getName() + "\n");
+		sb.append("description: \t" + getDescription() + "\n");
+		sb.append("uri: \t" + getURI() + "\n");
+		sb.append("creator: \t" + getCreator() + "\n");
+		sb.append("creationDateTime: \t" + getCreationDateTime() + "\n");
+		sb.append("****End ProjectModel****\n");
+		return sb.toString();
+	}
 
 	public void setPerspectiveName(String perspectiveName) {
 		this.name = perspectiveName;
 	}
 
-	public String getPerspectiveName() {
+	public String getName() {
 		return name;
 	}
 	
@@ -35,7 +35,7 @@ public class PerspectiveModel {
 		this.description = perspectiveDescription;
 	}
 
-	public String getPerspectiveDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -43,7 +43,7 @@ public class PerspectiveModel {
 		this.uri = perspectiveURI;
 	}
 	
-	public String getPerspectiveURI() {
+	public String getURI() {
 		return uri;
 	}
 
@@ -59,7 +59,7 @@ public class PerspectiveModel {
 		this.creator = perspectiveCreator;
 	}
 	
-	public String getPerspectiveCreator() {
+	public String getCreator() {
 		return creator;
 	}
 }
